@@ -15,6 +15,10 @@ import jakarta.json.JsonValue;
 import vttp.batch5.paf.day27.models.LineItem;
 
 public class Utils {
+    public static final String REDIS_TEMPLATE = "redis-0";
+    public static final String REDIS_HKEY_EVENT = "EVENT";
+
+    public static final String EVENTS_OP_ADD = "ADD";
 
     public static final String SQL_INSERT_ORDER = """
             INSERT into purchase_orders(po_id, name, address, delivery_date)

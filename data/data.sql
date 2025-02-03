@@ -12,3 +12,6 @@ insert into line_items(name, quantity, unit_price, po_id) values
 
 select * from line_items;
 select * from purchase_orders;
+
+
+use mystore_backup;
