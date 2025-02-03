@@ -27,9 +27,10 @@ public class PurchaseOrderController {
   public ResponseEntity<String> postPurchaseOrder(@RequestBody String payload) {
 
     PurchaseOrder po = Utils.toPurchaseOrder(payload);
-    System.out.printf(">> po: %s\n", po);
-
+    
     String poId = poSvc.createPurchaseOrder(po);
+
+    System.out.printf(">> Successfully added PO: %s\n", po);
 
     // Returns the poId as JSON object
     JsonObject resp = Json.createObjectBuilder()

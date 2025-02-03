@@ -24,4 +24,6 @@ create table line_items (
 
 );
 
+create user 'fred'@'%' identified by 'qweasd';
 grant all privileges on mystore.* to 'fred'@'%';
+flush privileges;

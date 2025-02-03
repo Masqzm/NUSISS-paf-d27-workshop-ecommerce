@@ -16,6 +16,16 @@ import vttp.batch5.paf.day27.models.LineItem;
 
 public class Utils {
 
+    public static final String SQL_INSERT_ORDER = """
+            INSERT into purchase_orders(po_id, name, address, delivery_date)
+            VALUES (?, ?, ?, ?)
+    """;
+
+    public final static String SQL_INSERT_LINE_ITEMS = """
+            INSERT into line_items(name, quantity, unit_price, po_id)
+            VALUES (?, ?, ?, ?)
+    """;
+
     public static PurchaseOrder toPurchaseOrder(String payload) {
 
         JsonReader reader = Json.createReader(new StringReader(payload));

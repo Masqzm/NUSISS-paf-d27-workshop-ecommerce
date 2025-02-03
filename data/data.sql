@@ -1,3 +1,4 @@
+use mystore;
 
 set @po_id = 'abcd1234';
 
@@ -8,3 +9,6 @@ insert into line_items(name, quantity, unit_price, po_id) values
     ('apple', 10, .5, @po_id),
     ('grapes', 1, 5, @po_id),
     ('pear', 10, 5, @po_id);
+
+select * from line_items;
+select * from purchase_orders;
